@@ -7,7 +7,9 @@ A simple Log system that incorporates Log Levels to select for printing. `Logger
 
 Create a new Logger with 
 
-```Logger _logger = new Logger(LogLevel.Debug);```
+```
+Logger _logger = new Logger(LogLevel.Debug);
+```
 
 and print with 
 
@@ -41,7 +43,21 @@ Alternatively, open Packages/manifest.json and add the following to the dependen
 ```json
 {
     "dependencies": {
-        "com.konsnos.simpletabsystem": "https://github.com/konsnos/Simple-Tab-System.git?path=Assets/SimpleLogger"
+        "com.konsnos.simplelogger": "https://github.com/konsnos/Simple-Logger.git?path=Assets/SimpleLogger"
     }
 }
+```
+
+### Troubleshooting
+
+In case there is confusion due to multiple Logger classes available the following code will always select the Simple Logger
+
+```
+using Logger = konsnos.SimpleLogger.Logger;
+```
+
+or you can type the full namespace
+
+```
+konsnos.SimpleLogger.Logger _logger = new konsnos.SimpleLogger.Logger(LogLevel.Debug);
 ```
