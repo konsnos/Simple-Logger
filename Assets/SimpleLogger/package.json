@@ -1,0 +1,16 @@
+{
+    "name": "com.konsnos.simplelogger",
+    "version": "1.0.0",
+    "displayName": "Simple Logger",
+    "description": "A simple and versatile logger for Unity",
+    "unity": "2021.3",
+    "unityRelease": "38f1",
+   "keywords": [
+      "Debug"
+    ],
+    "author": {
+      "name": "Konstantinos Egkarchos",
+      "email": "konsnosl@gmail.com",
+      "url": "https://github.com/konsnos"
+    }
+  }
