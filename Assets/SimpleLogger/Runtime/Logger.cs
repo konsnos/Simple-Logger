@@ -1,6 +1,6 @@
 namespace konsnos.SimpleLogger
 {
-    public class Logger
+    public struct Logger
     {
         private readonly LogLevel _logLevel;
         

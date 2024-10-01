@@ -1,6 +1,6 @@
 {
     "name": "com.konsnos.simplelogger",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "displayName": "Simple Logger",
     "description": "A simple and versatile logger for Unity",
     "unity": "2021.3",

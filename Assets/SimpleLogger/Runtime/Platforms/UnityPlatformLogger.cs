@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace konsnos.SimpleLogger.Platforms
 {
+#if UNITY_2019_4_OR_NEWER
     internal class UnityPlatformLogger : BasePlatformLogger
     {
         public override void Log(LogLevel logLevel, string message, object context)
@@ -31,4 +32,5 @@ namespace konsnos.SimpleLogger.Platforms
             }
         }
     }
+#endif
 }
