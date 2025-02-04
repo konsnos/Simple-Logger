@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.2] - 2025-02-04
+* Added tags which color the log messages for better readability
+
 ## [1.0.1] - 2024-10-01
 * Memory usage changes
 

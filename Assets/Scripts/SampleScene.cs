@@ -19,12 +19,12 @@ public class SampleScene : MonoBehaviour
 
     public void LogDebug()
     {
-        _logger.LogDebug("Debug log", gameObject);
+        _logger.LogDebug("Debug log", gameObject, nameof(SampleScene));
     }
     
     public void LogInfo()
     {
-        _logger.LogInfo("Info log", gameObject);
+        _logger.LogInfo("Info log", gameObject, GenerateRandomString());
     }
     
     public void LogWarning()
@@ -66,5 +66,10 @@ public class SampleScene : MonoBehaviour
         var logLevel = (LogLevel)value;
         _logger.LogInfo($"Logger Singleton log level: {logLevel}", gameObject);
         LoggerSingleton.Instance.LogLevel = LogLevel.Debug;
+    }
+
+    private string GenerateRandomString()
+    {
+        return Random.Range(0, 1000000).ToString();
     }
 }
