@@ -7,6 +7,12 @@ namespace konsnos.SimpleLogger
         private readonly LogLevel _logLevel;
         
         private static readonly Dictionary<string, string> Tags = new Dictionary<string, string>();
+        
+        /// <summary>
+        /// Enables the coloring of the tags.
+        /// May be useful to disable for production builds if color tags are not parsed by the viewer.
+        /// </summary>
+        public static bool ColorsEnabled { get; set; } = true;
 
         private static readonly string[] Colors = new[]
         {
@@ -70,6 +76,8 @@ namespace konsnos.SimpleLogger
 
         private static string TagMessage(string message, string tag)
         {
+            if(!ColorsEnabled) return $"[{tag}] {message}";
+            
             if (Tags.TryGetValue(tag, out var color)) return $"<color=#{color}>[{tag}]</color> {message}";
             
             Tags[tag] = Colors[_colorIndex];

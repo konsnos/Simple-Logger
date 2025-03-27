@@ -15,6 +15,8 @@ public class SampleScene : MonoBehaviour
     {
         instanceLoggerDropdown.onValueChanged.AddListener(InstanceLoggerLogLevelChanged);
         singletonLoggerDropdown.onValueChanged.AddListener(SingletonLoggerLogLevelChanged);
+
+        Logger.ColorsEnabled = true;
     }
 
     public void LogDebug()
@@ -48,7 +50,7 @@ public class SampleScene : MonoBehaviour
 
         await Task.Run(() =>
         {
-            _logger.LogDebug("Log in async");
+            _logger.LogDebug("Log in async", tag: "Async");
         });
         
         _logger.LogDebug("Logging async done", gameObject);
