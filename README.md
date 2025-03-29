@@ -1,6 +1,6 @@
 # Simple Logger
 
-A simple Log system that incorporates Log Levels to select for printing. `Logger` is instanced and can be created with different Log Levels while `LoggerSingleton` has its own Log Level and can control log printing universally in the project. 
+A simple Log system that incorporates Log Levels to select for printing. `Logger` is instanced and can be created with different Log Levels, while `LoggerSingleton` has its Log Level and can control log printing universally in the project. 
 
 
 ## Usage
@@ -17,7 +17,7 @@ and print with
 _logger.LogDebug("Debug log", gameObject);
 ```
 
-The Log Level only can be changed in the constructor of the Logger. However, the `LoggerSingleton` Log Level can be set at any time with 
+The Log Level can only be changed in the constructor of the Logger. However, the `LoggerSingleton` Log Level can be set at any time with 
 
 ```
 LoggerSingleton.Instance.LogLevel = LogLevel.Debug;
@@ -50,13 +50,13 @@ Alternatively, open Packages/manifest.json and add the following to the dependen
 
 ### Troubleshooting
 
-In case there is confusion due to multiple Logger classes available the following code will always select the Simple Logger
+In case there is confusion due to multiple Logger classes available, the following code will always select the Simple Logger
 
 ```
 using Logger = konsnos.SimpleLogger.Logger;
 ```
 
-or you can type the full namespace
+Or you can type the entire namespace
 
 ```
 konsnos.SimpleLogger.Logger _logger = new konsnos.SimpleLogger.Logger(LogLevel.Debug);
